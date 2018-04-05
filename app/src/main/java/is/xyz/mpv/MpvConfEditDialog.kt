@@ -11,9 +11,8 @@ import java.io.File
 class MpvConfEditDialog @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
-        defStyleAttr: Int = android.R.attr.dialogPreferenceStyle,
-        defStyleRes: Int = 0
-): DialogPreference(context, attrs, defStyleAttr, defStyleRes) {
+        defStyleAttr: Int = android.R.attr.dialogPreferenceStyle
+): DialogPreference(context, attrs, defStyleAttr) {
     private val configFile: File = File("${context.filesDir.path}/mpv.conf")
 
     init {

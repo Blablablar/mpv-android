@@ -540,11 +540,6 @@ class MPVActivity : Activity(), EventObserver, TouchGesturesObserver {
         }
         prevBtn.visibility = View.VISIBLE
         nextBtn.visibility = View.VISIBLE
-
-        val g = ContextCompat.getColor(applicationContext, R.color.tint_disabled)
-        val w = ContextCompat.getColor(applicationContext, R.color.tint_normal)
-        prevBtn.imageTintList = ColorStateList.valueOf(if (plPos == 0) g else w)
-        nextBtn.imageTintList = ColorStateList.valueOf(if (plPos == plCount-1) g else w)
     }
 
     private fun eventPropertyUi(property: String) {

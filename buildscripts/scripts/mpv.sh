@@ -16,6 +16,9 @@ fi
 extrald=
 [[ "$ndk_triple" == "aarch64"* ]] && extrald="-fuse-ld=gold"
 
+sed 's|android.*posix-spawn-native|iconv\&\&\!iconv|' wscript -i
+sed '/posix-spawn\.c.*android/d' wscript_build.py -i
+
 LDFLAGS="$extrald" \
 ./waf configure \
 	--disable-iconv --lua=52 \

@@ -10,9 +10,8 @@ import android.widget.TextView
 class VersionInfoDialog @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = android.R.attr.dialogPreferenceStyle,
-    defStyleRes: Int = 0
-): DialogPreference(context, attrs, defStyleAttr, defStyleRes), LogObserver {
+    defStyleAttr: Int = android.R.attr.dialogPreferenceStyle
+): DialogPreference(context, attrs, defStyleAttr), LogObserver {
     init {
         isPersistent = false
         dialogLayoutResource = R.layout.version_dialog

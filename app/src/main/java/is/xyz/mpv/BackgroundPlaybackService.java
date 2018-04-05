@@ -49,7 +49,6 @@ public class BackgroundPlaybackService extends Service implements EventObserver 
         Notification.Builder builder =
             new Notification.Builder(this)
                     .setPriority(Notification.PRIORITY_LOW)
-                    .setVisibility(Notification.VISIBILITY_PUBLIC)
                     .setContentTitle(cachedMediaTitle)
                     .setSmallIcon(R.drawable.ic_mpv_symbolic)
                     .setContentIntent(pendingIntent);
@@ -65,7 +64,6 @@ public class BackgroundPlaybackService extends Service implements EventObserver 
             // action icons need to be 32dp according to the docs
             builder.addAction(R.drawable.ic_skip_previous_black_32dp, "Prev", createButtonIntent("ACTION_PREV"));
             builder.addAction(R.drawable.ic_skip_next_black_32dp, "Next", createButtonIntent("ACTION_NEXT"));
-            builder.setStyle(new Notification.MediaStyle().setShowActionsInCompactView(0, 1));
         }
 
         return builder.build();

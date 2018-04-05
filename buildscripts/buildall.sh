@@ -5,7 +5,7 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 cleanbuild=0
 nodeps=0
-clang=0
+clang=1
 target=mpv-android
 arch=armv7l
 

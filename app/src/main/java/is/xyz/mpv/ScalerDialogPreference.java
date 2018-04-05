@@ -14,10 +14,6 @@ import android.widget.Spinner;
 import java.util.Arrays;
 
 public class ScalerDialogPreference extends DialogPreference {
-    public ScalerDialogPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context, attrs);
-    }
     public ScalerDialogPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
