@@ -472,7 +472,6 @@ class MPVActivity : Activity(), EventObserver, TouchGesturesObserver {
                 dialog.dismiss()
                 trackSwitchNotification { TrackData(trackId, type) }
             }
-            setOnDismissListener { if (!wasPlayerPaused) player.paused = false }
             create().show()
         }
     }

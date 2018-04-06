@@ -51,7 +51,7 @@ rm "android-ndk-${v_ndk}-${os_ndk}-x86_64.zip"
 
 # ndk-toolchain
 cd "android-ndk-${v_ndk}"
-toolchain_api=19
+toolchain_api=16
 ./build/tools/make_standalone_toolchain.py \
 	--arch arm --api $toolchain_api \
 	--install-dir `pwd`/../ndk-toolchain
